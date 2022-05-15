@@ -64,6 +64,10 @@ import numpy as np
 # PyTorch TensorBoard support
 from torch.utils.tensorboard import SummaryWriter
 
+# To solve problem such as has no attribute 'get_filesystem'
+import tensorflow as tf
+import tensorboard as tb
+tf.io.gfile = tb.compat.tensorflow_stub.io.gfile
 
 ######################################################################
 # Showing Images in TensorBoard
